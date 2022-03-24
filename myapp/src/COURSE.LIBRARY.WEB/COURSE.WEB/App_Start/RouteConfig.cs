@@ -14,6 +14,14 @@ namespace COURSE.WEB
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
+                name: "Todas as bibliotecas",
+                url: "biblioteca/",
+                defaults: new { Controller = "Home", action = "Listar" }
+
+               );
+
+
+            routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }

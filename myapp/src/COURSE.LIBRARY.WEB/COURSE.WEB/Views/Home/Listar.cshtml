@@ -1,0 +1,39 @@
+﻿@model IEnumerable<COURSE.WEB.Models.Biblioteca>
+
+@{
+    ViewBag.Title = "Biblioteca";
+}
+
+<h2>Biblioteca</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Nome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Livro)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Livro)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.BibliotecaId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.BibliotecaId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.BibliotecaId })
+        </td>
+    </tr>
+}
+
+</table>
