@@ -16,15 +16,16 @@ namespace COURSE.WEB
             routes.MapRoute(
                 name: "Todas as bibliotecas",
                 url: "biblioteca/",
-                defaults: new { Controller = "Home", action = "Listar" }
-
+                defaults: new { Controller = "Home", action = "Listar" },
+                namespaces: new[] { "COURSE.WEB.Controllers" }
                );
 
 
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional },
+                namespaces: new[] { "COURSE.WEB.Controllers" }
             );
         }
     }
