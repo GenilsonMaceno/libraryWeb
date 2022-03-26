@@ -22,5 +22,34 @@ namespace COURSE.WEB.Models
         public Biblioteca()
         {
         }
+
+        public List<Biblioteca> CriarDados()
+        {
+            var bibliotecas = new List<Biblioteca>()
+            {
+                new Biblioteca
+                {
+                    BibliotecaId = 1,
+                    Livro = "Teste",
+                    Nome = "São Judas"
+                },
+
+                new Biblioteca
+                {
+                    BibliotecaId = 2,
+                    Livro = "Teste 2",
+                    Nome = "São Judas"
+                },
+
+                new Biblioteca
+                {
+                    BibliotecaId = 3,
+                    Livro = "Teste 3",
+                    Nome = "São Judas"
+                }
+            };
+
+            return bibliotecas;
+        }
     }
 }

@@ -18,31 +18,9 @@ namespace COURSE.WEB.Controllers
         {
             try
             {
-                var model = new List<Biblioteca>()
-                {
-                    new Biblioteca
-                    {
-                        BibliotecaId = 1,
-                        Livro = "Teste",
-                        Nome = "São Judas"
-                    },
+                var model = new Biblioteca();
 
-                    new Biblioteca
-                    {
-                        BibliotecaId = 2,
-                        Livro = "Teste 2",
-                        Nome = "São Judas"
-                    },
-
-                    new Biblioteca
-                    {
-                        BibliotecaId = 3,
-                        Livro = "Teste 3",
-                        Nome = "São Judas"
-                    }
-                };
-
-                return View(model);
+                return View(model.CriarDados());
             }
             catch (Exception ex)
             {
